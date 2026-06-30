@@ -1,0 +1,13 @@
+{
+  "name": "murphy",
+  "version": "1.0.0",
+  "description": "Pre-mortem de código antes de implementar. Analisa suposições implícitas, ambiguidade, reversibilidade, efeitos colaterais e dependências frágeis antes de qualquer ação destrutiva ou ambígua.",
+  "author": {
+    "name": "Pedro Henrique",
+    "url": "https://github.com/PedroHrr-css"
+  },
+  "homepage": "https://github.com/PedroHrr-css/murphy-skill",
+  "repository": "https://github.com/PedroHrr-css/murphy-skill",
+  "license": "MIT",
+  "keywords": ["safety", "code-review", "pre-mortem", "risk-analysis"]
+}

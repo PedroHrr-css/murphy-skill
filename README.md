@@ -33,15 +33,38 @@ Riscos **leves** são listados e o trabalho segue normalmente. Riscos **graves**
 
 ## Instalação
 
-Escolha **um** dos três níveis abaixo de acordo com o quanto você quer que Murphy intervenha, e copie o arquivo correspondente.
+### Via comando (recomendado)
+
+Dentro de uma sessão do Claude Code:
+
+```
+/plugin marketplace add PedroHrr-css/murphy-skill
+/plugin install murphy@murphy
+```
+
+(são dois comandos separados — o primeiro registra o repositório como fonte, o segundo instala o plugin)
+
+Isso instala a variante **guarded** por padrão (dispara automaticamente só em risco real). Para trocar de nível depois de instalado, veja [Trocando de nível](#trocando-de-nível-depois) abaixo.
+
+Para atualizar depois de uma nova versão:
+```
+/plugin marketplace update
+```
+
+Para desinstalar:
+```
+/plugin remove murphy
+```
+
+### Manual (cópia direta de arquivo)
+
+Se preferir não usar o sistema de plugins, ou quiser escolher um nível diferente de `guarded` já na instalação, escolha um dos três níveis abaixo e copie o arquivo correspondente.
 
 | Nível | Quando dispara | Arquivo |
 |---|---|---|
 | **Manual** | Só quando você digitar `/murphy` | `variants/SKILL-manual.md` |
-| **Guarded** (recomendado) | Automático, só em risco real (ações destrutivas, ambiguidade, mudanças em algo compartilhado) | `variants/SKILL-guarded.md` |
+| **Guarded** (recomendado, padrão do plugin) | Automático, só em risco real (ações destrutivas, ambiguidade, mudanças em algo compartilhado) | `variants/SKILL-guarded.md` |
 | **Watchful** | Automático, em praticamente toda request de código | `variants/SKILL-watchful.md` |
-
-### Passo a passo
 
 ```bash
 # Escolha pessoal (qualquer projeto)
@@ -86,6 +109,12 @@ murphy-skill/
 ├── CONTRIBUTING.md
 ├── CHANGELOG.md
 ├── TESTS.md
+├── .claude-plugin/
+│   ├── plugin.json
+│   └── marketplace.json
+├── skills/
+│   └── murphy/
+│       └── SKILL.md        ← versão guarded, usada pelo /plugin install
 ├── examples/
 │   ├── README.md
 │   ├── 01-force-push.md
@@ -98,12 +127,15 @@ murphy-skill/
 ├── evals/
 │   └── evals.json
 └── assets/
-    └── banner.svg
+    ├── banner.svg
+    └── mascot.svg
 ```
 
 ## Trocando de nível depois
 
-Basta sobrescrever o `SKILL.md` instalado com o conteúdo de outra variante em `variants/`. Não precisa reiniciar — é o mesmo arquivo sendo editado.
+**Se instalou via `/plugin install`:** o plugin instalado fica em cache local gerenciado pelo Claude Code (não em `~/.claude/skills/`). Pra trocar de nível, edite `skills/murphy/SKILL.md` no seu fork/clone do repositório com o conteúdo da variante desejada (`variants/SKILL-manual.md` ou `variants/SKILL-watchful.md`), faça commit, e rode `/plugin marketplace update` seguido de reinstalar o plugin. Alternativamente, instale manualmente (veja abaixo) para trocar de nível sem precisar mexer no repositório.
+
+**Se instalou manualmente:** basta sobrescrever o `SKILL.md` instalado com o conteúdo de outra variante em `variants/`. Não precisa reiniciar — é o mesmo arquivo sendo editado.
 
 ## Contribuindo
 

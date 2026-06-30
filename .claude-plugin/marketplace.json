@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "murphy",
+  "owner": {
+    "name": "Pedro Henrique"
+  },
+  "plugins": [
+    {
+      "name": "murphy",
+      "description": "Pre-mortem de código antes de implementar. Para e pergunta antes de ações destrutivas, ambíguas ou irreversíveis; segue direto em tarefas simples e reversíveis.",
+      "source": "./",
+      "category": "development"
+    }
+  ]
+}
