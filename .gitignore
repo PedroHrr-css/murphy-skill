@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Skill-creator artifacts (se rodar evals localmente)
+benchmarks/
+workspace/
+*.skill
+
+# Logs
+*.log

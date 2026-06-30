@@ -1,0 +1,58 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="body" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d97757"/>
+      <stop offset="100%" stop-color="#c2602f"/>
+    </linearGradient>
+    <radialGradient id="cheekGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffb38a" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffb38a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- soft ground shadow -->
+  <ellipse cx="200" cy="355" rx="90" ry="14" fill="#1a1a2e" opacity="0.12"/>
+
+  <!-- body: simple rounded blob, friendly and approachable -->
+  <path d="M200 60
+           C 280 60, 330 120, 330 200
+           C 330 280, 280 335, 200 335
+           C 120 335, 70 280, 70 200
+           C 70 120, 120 60, 200 60 Z"
+        fill="url(#body)"/>
+
+  <!-- subtle highlight on top -->
+  <ellipse cx="170" cy="110" rx="60" ry="30" fill="#ffffff" opacity="0.12"/>
+
+  <!-- cheeks -->
+  <circle cx="135" cy="225" r="28" fill="url(#cheekGlow)"/>
+  <circle cx="265" cy="225" r="28" fill="url(#cheekGlow)"/>
+
+  <!-- eyes: simple, alert, slightly worried (classic Murphy's-law expression) -->
+  <g fill="#1a1a2e">
+    <ellipse cx="160" cy="190" rx="10" ry="13"/>
+    <ellipse cx="240" cy="190" rx="10" ry="13"/>
+  </g>
+  <!-- eyebrows: one raised = skeptical "wait, what could go wrong" look -->
+  <g stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M142 165 L178 172"/>
+    <path d="M222 168 L258 158"/>
+  </g>
+
+  <!-- small worried/curious mouth -->
+  <path d="M185 235 Q200 245 215 235" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+  <!-- tiny arms holding a magnifying glass -->
+  <path d="M90 220 Q60 240 75 270" stroke="#c2602f" stroke-width="14" stroke-linecap="round" fill="none"/>
+
+  <!-- magnifying glass, Murphy's signature prop -->
+  <g transform="translate(255,255) rotate(20)">
+    <circle cx="0" cy="0" r="34" fill="#fff7ef" stroke="#1a1a2e" stroke-width="8"/>
+    <line x1="24" y1="24" x2="50" y2="50" stroke="#1a1a2e" stroke-width="10" stroke-linecap="round"/>
+    <text x="0" y="11" font-family="monospace" font-size="30" font-weight="700" fill="#d97757" text-anchor="middle">!</text>
+  </g>
+
+  <!-- little antenna nub, playful detail -->
+  <circle cx="200" cy="55" r="7" fill="#c2602f"/>
+  <line x1="200" y1="62" x2="200" y2="75" stroke="#c2602f" stroke-width="5"/>
+</svg>

@@ -1,0 +1,44 @@
+<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e94560"/>
+      <stop offset="100%" stop-color="#f3a953"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#bg)"/>
+
+  <!-- subtle grid pattern -->
+  <g opacity="0.06" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+  </g>
+
+  <!-- magnifying glass -->
+  <g transform="translate(120,150)">
+    <circle cx="0" cy="0" r="70" fill="none" stroke="url(#accent)" stroke-width="10"/>
+    <line x1="50" y1="50" x2="100" y2="100" stroke="url(#accent)" stroke-width="14" stroke-linecap="round"/>
+    <!-- broken code bracket inside the lens, representing "what could go wrong" -->
+    <text x="0" y="14" font-family="monospace" font-size="46" fill="#f3a953" text-anchor="middle" font-weight="bold">!</text>
+  </g>
+
+  <!-- title -->
+  <text x="260" y="145" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="64" fill="#ffffff" font-weight="700">Murphy</text>
+  <text x="260" y="190" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#a8b2d1">Pre-mortem de código para Claude Code</text>
+
+  <!-- tagline -->
+  <text x="260" y="230" font-family="monospace" font-size="17" fill="#e94560">"Se algo pode dar errado, vai dar errado."</text>
+
+  <!-- small badges row (decorative, not real shields) -->
+  <g transform="translate(260,250)" font-family="monospace" font-size="13" fill="#6c7a9c">
+    <text x="0" y="14">claude-code-skill</text>
+    <text x="170" y="14">MIT</text>
+    <text x="230" y="14">v1.0.0</text>
+  </g>
+</svg>
