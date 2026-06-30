@@ -11,8 +11,8 @@
 > "Se algo pode dar errado, vai dar errado."
 
 <p align="center">
-  <a href="https://github.com/SEU-USUARIO/murphy/stargazers"><img src="https://img.shields.io/github/stars/SEU-USUARIO/murphy?style=flat-square&color=111111&label=stars" alt="Stars"></a>
-  <a href="https://github.com/SEU-USUARIO/murphy/releases"><img src="https://img.shields.io/github/v/release/SEU-USUARIO/murphy?style=flat-square&color=111111&label=release" alt="Release"></a>
+  <a href="https://github.com/PedroHrr-css/murphy-skill/stargazers"><img src="https://img.shields.io/github/stars/PedroHrr-css/murphy-skill?style=flat-square&color=111111&label=stars" alt="Stars"></a>
+  <a href="https://github.com/PedroHrr-css/murphy-skill/releases"><img src="https://img.shields.io/github/v/release/PedroHrr-css/murphy-skill?style=flat-square&color=111111&label=release" alt="Release"></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-111111?style=flat-square" alt="MIT license"></a>
   <img src="https://img.shields.io/badge/claude--code-skill-111111?style=flat-square" alt="Claude Code skill">
 </p>
